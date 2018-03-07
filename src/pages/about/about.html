@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cours
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<button ion-item *ngFor="let monnaie of monnaie">
+		<h1>{{ monnaie.name }}</h1>
+		<h2>Prix : ${{ monnaie.price_usd }}</h2>
+		<h2></h2>
+		</button>
+	</ion-list>
+</ion-content>
