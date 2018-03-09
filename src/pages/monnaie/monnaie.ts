@@ -17,7 +17,7 @@ export class monnaiePage {
 	infos: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   	this.infos = this.navParams.get('data');
-  	console.log('infos')
+  	console.log(this.infos);
   }
 
   ionViewDidLoad() {
@@ -25,6 +25,7 @@ export class monnaiePage {
   }
 
   closeMonnaie(){
+    console.log("test")
   	this.viewCtrl.dismiss();
   }
 
