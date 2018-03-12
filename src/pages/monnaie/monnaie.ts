@@ -14,10 +14,17 @@ import { IonicPage, NavController, NavParams, ViewController} from 'ionic-angula
   templateUrl: 'monnaie.html',
 })
 export class monnaiePage {
+  public isToggled: boolean;
 	infos: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   	this.infos = this.navParams.get('data');
+    this.isToggled = false;
+
   	console.log(this.infos);
+  }
+
+  public notify(event) {
+    console.log(event.checked);
   }
 
   ionViewDidLoad() {

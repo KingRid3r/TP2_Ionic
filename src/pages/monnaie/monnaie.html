@@ -9,16 +9,36 @@
   <ion-navbar>
 	<ion-buttons start><button ion-button class="customButton" (click)="closeMonnaie()"><ion-icon name="arrow-back"></ion-icon></button></ion-buttons>
     <ion-title> {{infos.name}} </ion-title>
+    <ion-toggle item-right [(ngModel)]="isToggled" (ionChange)="notify($event)"></ion-toggle>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-		<h1>Favori : <ion-toggle [(ngModel)]="mushrooms"></ion-toggle></h1>
-	    <p item-right>{{infos.percent_change_24h}} %</p>
-		<ion-icon name="arrow-forward" item-right *ngIf="infos.percent_change_24h == 0"></ion-icon>
-		<ion-icon color="secondary" name="arrow-up" item-right *ngIf="infos.percent_change_24h > 0"></ion-icon>
-		<ion-icon color="danger" name="arrow-down" item-right *ngIf="infos.percent_change_24h < 0"></ion-icon>
-		<h1>Approvisionnement disponible : {{ infos.available_supply }}</h1>
+		<ion-item>
+	    	<p>{{infos.percent_change_24h}} %</p>
+			<ion-icon name="arrow-forward" item-right *ngIf="infos.percent_change_24h == 0"></ion-icon>
+			<ion-icon color="secondary" name="arrow-up" item-right *ngIf="infos.percent_change_24h > 0"></ion-icon>
+			<ion-icon color="danger" name="arrow-down" item-right *ngIf="infos.percent_change_24h < 0"></ion-icon>
+		</ion-item>
+		<ion-item>
+			<p>Approvisionnement disponible : {{ infos.available_supply }}</p>
+		</ion-item>
+				<ion-item>
+			<p>Approvisionnement disponible : {{ infos.available_supply }}</p>
+		</ion-item>		
+		<ion-item>
+			<p>Approvisionnement disponible : {{ infos.available_supply }}</p>
+		</ion-item>		
+		<ion-item>
+			<p>Approvisionnement disponible : {{ infos.available_supply }}</p>
+		</ion-item>		
+		<ion-item>
+			<p>Approvisionnement disponible : {{ infos.available_supply }}</p>
+		</ion-item>		
+		<ion-item>
+			<p>Approvisionnement disponible : {{ infos.available_supply }}</p>
+		</ion-item>
+
 </ion-content>
